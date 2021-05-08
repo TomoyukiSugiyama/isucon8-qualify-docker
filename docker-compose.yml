@@ -5,6 +5,7 @@ services:
       context: ./docker/app
     image: isucon8-qualify-app:golang
     networks:
+      - frontend
       - backend
     depends_on:
        - db
@@ -30,6 +31,14 @@ services:
     command: ["--character-set-server=utf8mb4"]
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-  
+  bench:
+    build:
+      context: ./docker/bench
+    image: isucon7-qualifiy-bench
+    depends_on:
+      - app
+    networks:
+      - frontend
 networks:
+  frontend:
   backend:

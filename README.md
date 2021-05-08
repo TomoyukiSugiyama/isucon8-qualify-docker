@@ -29,3 +29,9 @@ $ docker exec isucon8-qualify-docker_db_1 ./init.sh
 # Access web
 
 `http://localhost:8080`
+
+# Bench
+
+```
+# docker-compose up bench
+```
