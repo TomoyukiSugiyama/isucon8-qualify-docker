@@ -32,6 +32,6 @@ $ docker exec isucon8-qualify-docker_db_1 ./init.sh
 
 # Bench
 
-```
-# docker-compose up bench
+```bash
+$ docker-compose up bench
 ```
